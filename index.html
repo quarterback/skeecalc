@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skeeball Rating Calculator</title>
-    <meta name="description" content="Calculate your ARM (Alley Roller Mastery) rating and compete with skeeball players worldwide!">
+    <meta name="description" content="Calculate your rating and compete with skeeball players worldwide">
     <style>
         * {
             margin: 0;
@@ -14,8 +14,8 @@
         
         body {
             font-family: 'Courier New', monospace;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-            color: #00ff00;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 25%, #ff4500 50%, #8b4513 75%, #4b0082 100%);
+            color: #ffffff;
             min-height: 100vh;
             padding: 20px;
         }
@@ -29,13 +29,14 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            text-shadow: 0 0 20px #00ff00;
+            text-shadow: 0 0 20px #ff6b35;
             animation: glow 2s ease-in-out infinite alternate;
+            color: #ff6b35;
         }
         
         @keyframes glow {
-            from { text-shadow: 0 0 20px #00ff00; }
-            to { text-shadow: 0 0 30px #00ff00, 0 0 40px #00aa00; }
+            from { text-shadow: 0 0 20px #ff6b35; }
+            to { text-shadow: 0 0 30px #ff6b35, 0 0 40px #f7931e; }
         }
         
         .subtitle {
@@ -46,12 +47,12 @@
         }
         
         .card {
-            background: rgba(26, 26, 46, 0.9);
-            border: 2px solid #00ff00;
+            background: rgba(139, 69, 19, 0.8);
+            border: 2px solid #00cccc;
             border-radius: 12px;
             padding: 2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            box-shadow: 0 0 20px rgba(0, 204, 204, 0.3);
         }
         
         .form-group {
@@ -70,9 +71,9 @@
         input, button {
             width: 100%;
             padding: 15px;
-            background: #0f0f0f;
-            border: 2px solid #333;
-            color: #00ff00;
+            background: #2a1810;
+            border: 2px solid #666;
+            color: #ffffff;
             font-family: inherit;
             border-radius: 8px;
             font-size: 1rem;
@@ -80,9 +81,9 @@
         }
         
         input:focus {
-            border-color: #00ff00;
+            border-color: #00cccc;
             outline: none;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            box-shadow: 0 0 10px rgba(0, 204, 204, 0.5);
         }
         
         .scores-grid {
@@ -105,8 +106,8 @@
         }
         
         button {
-            background: linear-gradient(45deg, #003300, #006600);
-            border-color: #00ff00;
+            background: linear-gradient(45deg, #8b4513, #d2691e);
+            border-color: #00cccc;
             cursor: pointer;
             font-weight: bold;
             text-transform: uppercase;
@@ -115,10 +116,10 @@
         }
         
         button:hover {
-            background: linear-gradient(45deg, #00ff00, #00cc00);
+            background: linear-gradient(45deg, #00cccc, #20b2aa);
             color: #000;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 204, 204, 0.4);
         }
         
         button:disabled {
@@ -130,8 +131,8 @@
         .result {
             margin-top: 2rem;
             padding: 2rem;
-            background: linear-gradient(45deg, #1a1a2e, #16213e);
-            border: 2px solid #00ff00;
+            background: linear-gradient(45deg, #8b4513, #a0522d);
+            border: 2px solid #00cccc;
             border-radius: 12px;
             animation: slideIn 0.5s ease-out;
         }
@@ -159,9 +160,9 @@
         .stat-item {
             text-align: center;
             padding: 1rem;
-            background: rgba(0, 255, 0, 0.1);
+            background: rgba(0, 204, 204, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(0, 255, 0, 0.3);
+            border: 1px solid rgba(0, 204, 204, 0.3);
         }
         
         .stat-label {
@@ -176,7 +177,7 @@
         }
         
         .total-display {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(42, 24, 16, 0.8);
             border: 2px solid #00cccc;
             padding: 1rem;
             border-radius: 8px;
